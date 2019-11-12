@@ -114,8 +114,9 @@ function processSum(numberList, callback) {
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-function processProduct(/* CODE HERE */) {
+function processProduct(num1, num2, callback) {
   /* CODE HERE */
+  return callback(num1 * num2);
 }
 
 /**
@@ -138,9 +139,11 @@ function processProduct(/* CODE HERE */) {
  * "lady gaga" and `['foo', 'bar']` and `(bool) => bool ? 'nice!' : 'sad'`,
  * should return "sad".
 */
-function processContains(/* CODE HERE */) {
-  /* CODE HERE */
-}
+function processContains(item, list, callback) {
+  /* CODE HERE ASK HOW TO DO THIS PROBLEM WITH ONE OF THE 4 methods we covered */
+  return callback(list.includes(item));
+ // ASK HOW YOU CAN DO THIS WITH ONE OF THE FOUR METHODS
+};
 
 /**
  * ### Challenge `processDuplicateFree`
@@ -183,8 +186,13 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
+function getFullNames(runners) {
   /* CODE HERE */
+  const fullName = [];
+  runners.forEach(function(el){
+  return fullName.push(`${el.last_name}, ${el.first_name}`)
+  })
+  return fullName;
 }
 
 /**
