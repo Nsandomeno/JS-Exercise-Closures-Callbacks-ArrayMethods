@@ -304,12 +304,14 @@ function counterMakerWithLimit(a) {
   /* CODE HERE */
   var count = 0;
   return function counter() {
-  if (count <= a){
-    return count++;
-  } else{
-    return counter;
+  for (let i = 0; i<= a; i++){
+    if(count <= a ){
+      return count++;
+    }else {
+      count = 0;
     };
-  }; 
+  };
+  };
   };
 
 
